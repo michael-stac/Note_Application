@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "309786849815",
+    "project_id": "notex-5c4ce",
+    "storage_bucket": "notex-5c4ce.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:309786849815:android:53161753c68ef53ceda252",
+        "android_client_info": {
+          "package_name": "com.example.notex"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "309786849815-fah25fcnouoov9jdoosmo6n354mb5eag.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDknoItQNFKP2X9ODKhmXrK9WfMxudxkxg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "309786849815-fah25fcnouoov9jdoosmo6n354mb5eag.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
