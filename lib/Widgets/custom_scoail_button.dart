@@ -7,6 +7,8 @@ class SocialButton extends StatelessWidget {
   SocialButton({required this.text, required this.icon, this.onTap});
 
   final String text;
+  Color? bgColor;
+
   final Widget icon;
   final VoidCallback? onTap;
 
@@ -22,9 +24,10 @@ class SocialButton extends StatelessWidget {
         padding: const EdgeInsets.all(12),
         width: MediaQuery.of(context).size.width,
         decoration: BoxDecoration(
-          // color: AppColor.white,
+
+            // color: AppColor.white,
             borderRadius: BorderRadius.circular(8),
-            border: Border.all(color: AppColor.gray)),
+            border: Border.all(color: AppColor.primaryColor)),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
