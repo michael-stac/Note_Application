@@ -56,6 +56,7 @@ class _HomePageState extends State<HomePage> {
         ],
       ),
       body: Container(
+        padding: EdgeInsets.symmetric(horizontal: 12),
         child: ListView(
           children: [
             ...List.generate(10, (index) {
