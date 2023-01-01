@@ -5,14 +5,13 @@ import 'package:notex/Util/router.dart';
 
 class SplashScreen extends StatelessWidget {
   SplashScreen({Key? key}) : super(key: key);
-  User? user = FirebaseAuth.instance.currentUser;
+  // User? user = FirebaseAuth.instance.currentUser;
 
   @override
   Widget build(BuildContext context) {
     Future.delayed(const Duration(seconds: 2), () {
-      if (user == null) {
-        nextPageAndRemovePrevious(context, page: const GoogleAuthentication());
-      } else {}
+      nextPageAndRemovePrevious(context, page: const GoogleAuthentication());
+
     });
 
     return const Scaffold(
