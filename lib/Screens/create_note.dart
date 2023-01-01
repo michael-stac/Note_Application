@@ -15,6 +15,7 @@ class _CreateNoteState extends State<CreateNote> {
   GlobalKey<FormState> key = GlobalKey();
   TextEditingController title = TextEditingController();
   TextEditingController body = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,42 +32,53 @@ class _CreateNoteState extends State<CreateNote> {
               });
             }
           },
-          label: Text("Save note", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: AppColor.white),)),
-
+          label: Text(
+            "Save note",
+            style: TextStyle(
+                fontSize: 16,
+                fontWeight: FontWeight.w700,
+                color: AppColor.white),
+          )),
       backgroundColor: AppColor.white,
-
       appBar: AppBar(
         elevation: 0,
         backgroundColor: AppColor.white,
-        leading: BackButton(color: AppColor.black, ),
-
-        title: Text("Create Note", style: TextStyle(fontWeight: FontWeight.w700, fontSize: 22, color: AppColor.primaryColor),),
+        leading: BackButton(
+          color: AppColor.black,
+        ),
+        title: Text(
+          "Create Note",
+          style: TextStyle(
+              fontWeight: FontWeight.w700,
+              fontSize: 22,
+              color: AppColor.primaryColor),
+        ),
       ),
       body: CustomScrollView(
         slivers: [
           SliverToBoxAdapter(
             child: Container(
-              padding: EdgeInsets.symmetric(horizontal: 19, vertical: 20),
+              padding:  const EdgeInsets.symmetric(horizontal: 19, vertical: 20),
               child: Form(
                 key: key,
                 child: Column(
                   children: [
                     ///Title note
                     TextFormField(
-
                       controller: title,
-                      decoration:  InputDecoration(
-                          contentPadding: EdgeInsets.all(8),
-
+                      decoration: InputDecoration(
+                        contentPadding: EdgeInsets.all(8),
                         label: Text('Note title'),
-                        labelStyle: TextStyle(fontWeight: FontWeight.w700, fontSize: 16, color: AppColor.black),
-
+                        labelStyle: TextStyle(
+                            fontWeight: FontWeight.w700,
+                            fontSize: 16,
+                            color: AppColor.black),
                         enabledBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: AppColor.primaryColor)
-                        ),
+                            borderSide:
+                                BorderSide(color: AppColor.primaryColor)),
                         border: OutlineInputBorder(
-                            borderSide: BorderSide(color: AppColor.primaryColor)
-                        ),
+                            borderSide:
+                                BorderSide(color: AppColor.primaryColor)),
                       ),
                       validator: (value) {
                         if (value!.isEmpty) {
@@ -80,7 +92,6 @@ class _CreateNoteState extends State<CreateNote> {
                     ///Description
                     ///
                     TextFormField(
-
                         controller: body,
                         maxLines: 7,
                         minLines: 2,
@@ -89,20 +100,20 @@ class _CreateNoteState extends State<CreateNote> {
                             return 'body is empty';
                           }
                         },
-                        decoration:  InputDecoration(
-                          contentPadding: EdgeInsets.all(8),
-                            label: const Text('Note body'),
-                            labelStyle: TextStyle(fontWeight: FontWeight.w700, fontSize: 16, color: AppColor.black),
-                            enabledBorder: OutlineInputBorder(
-                                borderSide: BorderSide(color: AppColor.primaryColor)
-                            ),
-                            border: OutlineInputBorder(
-                              borderSide: BorderSide(color: AppColor.primaryColor)
-                            ),
-
-
-                        )
-                    )
+                        decoration: InputDecoration(
+                          contentPadding: const EdgeInsets.all(8),
+                          label: const Text('Note body'),
+                          labelStyle: TextStyle(
+                              fontWeight: FontWeight.w700,
+                              fontSize: 16,
+                              color: AppColor.black),
+                          enabledBorder: OutlineInputBorder(
+                              borderSide:
+                                  BorderSide(color: AppColor.primaryColor)),
+                          border: OutlineInputBorder(
+                              borderSide:
+                                  BorderSide(color: AppColor.primaryColor)),
+                        ))
                   ],
                 ),
               ),
